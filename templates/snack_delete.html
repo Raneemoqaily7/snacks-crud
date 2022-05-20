@@ -6,8 +6,15 @@
       <div class="row">
         <div class="col-lg-8">
           <h1>Welcome to <span>Restaurantly</span></h1>
-          <h2>Do you Want to delete {{snack.title}} item ? </h2>
-          <a href="{% url 'delete' pk=snack.pk %}" class="btn-menu animated fadeInUp scrollto">Yes </a>
+          <h2>Do you Want to delete {{snack.title}} item ? Or <a href="{% url 'home' %}" class="btn-menu animated fadeInUp scrollto"> Back Home</a> </h2>
+          <form action="" method="post">
+              {% csrf_token %}
+              
+              <input type="submit" value =" Yes , Delete!" class="btn-get-started btn-danger" />
+                
+              
+          </form>
+          
 
           <div class="btns">
             <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>

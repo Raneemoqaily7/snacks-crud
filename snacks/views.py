@@ -33,6 +33,11 @@ class SnackDeleteView(DeleteView):
     model = Snack
     success_url= '/'
 
+class SnackListView (ListView):
+    template_name = "snack_list.html"
+    model =Snack
+    context_object_name = "snacks_list"
+
 
 
 
