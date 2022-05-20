@@ -8,10 +8,18 @@ from django.views.generic import (
                             UpdateView
                         )
 
+from .models import Snack
 # Create your views here.
 
 class HomeView (TemplateView):
     template_name = "home.html"
+
+class SnackCreatView(CreateView):
+    template_name = "snack_create.html"
+    model = Snack
+    fields=["title" , "description"]
+
+
 
 
 
